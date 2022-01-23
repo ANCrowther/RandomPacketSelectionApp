@@ -15,6 +15,16 @@ This application takes in a list of employee/clients then randomly selects clien
 
 From the original request, this program only shows up to three randomly selected clients at a time. If the user selected 'Select Random Packet' once, then selects 'Select 3 Packets', it will still only show three randomly selected clients. The 'Select 3 Packets' will only select the number of clients needed to complete the list.
 
+Do to the sensitive nature of the files being used from the original request, this application does not save the data, nor update the excel spreadsheet. The user will have to manually update the spreadsheet with the 'Client Checked' column with the results.
+
+The excel file must have the following headings for the program to work
+
+- 'First Name'		- client's first name
+- 'Last Name'		- client's last name
+- 'Employee Name'	- employee's name
+- 'Client Checked'	- boolean TRUE or FALSE
+
+
 ## About
 
 This application is built in C# .NET Framework 4.8
