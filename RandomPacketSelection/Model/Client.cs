@@ -8,7 +8,7 @@ namespace RandomPacketSelection.Model
         public string LastName { get; set; }
         // PacketSelector class needs to determine total client count and to ignore
         // clients already selected for the random packet selection.
-        public bool Checked { get; set; }
+        public bool IsChecked { get; set; }
 
         // FullName is used to prevent redundent clients being added to the client list.
         public string FullName 
@@ -25,7 +25,7 @@ namespace RandomPacketSelection.Model
         {
             FirstName = fName;
             LastName = lName;
-            Checked = isChecked;
+            IsChecked = isChecked;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

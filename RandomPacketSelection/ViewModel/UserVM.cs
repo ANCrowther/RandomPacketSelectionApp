@@ -11,8 +11,8 @@ namespace RandomPacketSelection.ViewModel
 {
     public class UserVM : INotifyPropertyChanged
     {
-        private ExcelReader exReader;
-        private OpenFileDialog openFileDlg;
+        private ExcelReader excelReader;
+        private OpenFileDialog openFileDialog;
         private bool isFileLoaded = false;
         private Random random;
 
@@ -84,12 +84,12 @@ namespace RandomPacketSelection.ViewModel
         // Opens the Open File Dialog so the user can select excel file.
         private void OpenExcelFile()
         {
-            openFileDlg = new OpenFileDialog();
-            Nullable<bool> result = openFileDlg.ShowDialog();
+            openFileDialog = new OpenFileDialog();
+            Nullable<bool> result = openFileDialog.ShowDialog();
 
             if (result == true)
             {
-                exReader = new ExcelReader(openFileDlg.FileName);
+                excelReader = new ExcelReader(openFileDialog.FileName);
             }
 
             LoadList();
@@ -101,7 +101,7 @@ namespace RandomPacketSelection.ViewModel
         // Gets the inputs from the excel file. Prepares the datagrids for inputs.
         private void LoadList()
         {
-            ExcelInputList = new ObservableCollection<ExcelInputs>(exReader.ExcelInputsList);
+            ExcelInputList = new ObservableCollection<ExcelInputs>(excelReader.ExcelInputsList);
             ThreeClientList = new ObservableCollection<ExcelInputs>();
             randomClient = new Client();
         }
@@ -149,7 +149,7 @@ namespace RandomPacketSelection.ViewModel
         // ThreeLClientList with randomly chosen employee/client names.
         private void GetRandomClient()
         {
-            int rng = RNG(GetAvailableClientCount());
+            int randomNumber = RNG(GetAvailableClientCount());
             int index = 0;
 
             foreach(ExcelInputs ex in ExcelInputList)
@@ -157,11 +157,11 @@ namespace RandomPacketSelection.ViewModel
                 if (ex.ClientChecked == false)
                 {
                     index++;
-                    if (index == rng)
+                    if (index == randomNumber)
                     {
                         randomClient = new Client { FirstName = ex.ClientFirstName, 
                                                     LastName = ex.ClientLastName, 
-                                                    Checked = ex.ClientChecked };
+                                                    IsChecked = ex.ClientChecked };
                         // Prevents the ThreeClientList from having more than three inputs.
                         if(ThreeClientList.Count < 3)
                         {
@@ -184,10 +184,10 @@ namespace RandomPacketSelection.ViewModel
         private void UpdateDataGrid()
         {
             ExcelInputList.Where(c => c.ClientFullName == randomClient.FullName).Select(c => { c.ClientChecked = true; return c; }).ToList();
-            List<ExcelInputs> temp = new List<ExcelInputs>();
-            temp = ExcelInputList.ToList();
+            List<ExcelInputs> tempList = new List<ExcelInputs>();
+            tempList = ExcelInputList.ToList();
             ExcelInputList.Clear();
-            ExcelInputList = new ObservableCollection<ExcelInputs>(temp);
+            ExcelInputList = new ObservableCollection<ExcelInputs>(tempList);
         }
 
         // SelectThreeRandomCommand calls this method. Checks to ensure excel was loaded first,
@@ -262,7 +262,7 @@ namespace RandomPacketSelection.ViewModel
         {
             ExcelInputs output = new ExcelInputs();
 
-            int rng = RNG(GetAvailableClientCount());
+            int randomNumber = RNG(GetAvailableClientCount());
             int index = 0;
 
             foreach (ExcelInputs ex in ExcelInputList)
@@ -270,10 +270,10 @@ namespace RandomPacketSelection.ViewModel
                 if (ex.ClientChecked == false)
                 {
                     index++;
-                    if (index == rng)
+                    if (index == randomNumber)
                     {
                         output = new ExcelInputs { EmployeeName=ex.EmployeeName, ClientFirstName=ex.ClientFirstName, ClientLastName=ex.ClientLastName, ClientChecked=ex.ClientChecked };
-                        randomClient = new Client { FirstName = ex.ClientFirstName, LastName = ex.ClientLastName, Checked = ex.ClientChecked };
+                        randomClient = new Client { FirstName = ex.ClientFirstName, LastName = ex.ClientLastName, IsChecked = ex.ClientChecked };
                     }
                 }
             }
