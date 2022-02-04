@@ -12,7 +12,7 @@ namespace RandomPacketSelection.Model
         [ExcelColumnName("Last Name")]
         public string ClientLastName { get; set; }
         
-        [ExcelColumnName("Employee Name")]
+        [ExcelColumnName("Employee")]
         public string EmployeeName { get; set; }
         
         [ExcelColumnName("Client Checked")]

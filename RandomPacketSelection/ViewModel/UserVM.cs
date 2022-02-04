@@ -141,7 +141,7 @@ namespace RandomPacketSelection.ViewModel
             }
             else
             {
-                System.Windows.MessageBox.Show("You must open your Excel file first.");
+                MessageBoxMessage.SelectExcelFileFirst();
             }
         }
 
@@ -209,7 +209,7 @@ namespace RandomPacketSelection.ViewModel
             }
             else
             {
-                System.Windows.MessageBox.Show("You must open your Excel file first.");
+                MessageBoxMessage.SelectExcelFileFirst();
             }
 
             if(randomClient != null)
