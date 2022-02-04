@@ -21,7 +21,7 @@ The excel file must have the following headings for the program to work
 
 - 'First Name'		- client's first name
 - 'Last Name'		- client's last name
-- 'Employee Name'	- employee's name
+- 'Employee'	- employee's name
 - 'Client Checked'	- boolean TRUE or FALSE
 
 
