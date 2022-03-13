@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomPacketSelection", "RandomPacketSelection\RandomPacketSelection.csproj", "{C3FC1578-9769-4B25-8D14-25B27330E557}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelManagerLibrary", "ExcelManagerLibrary\ExcelManagerLibrary.csproj", "{1B1D37D6-3390-4D9C-AADC-5BCC2A3C36BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WVSRandomizer", "WVSRandomizer\WVSRandomizer.csproj", "{4D751D36-1D58-43DF-8883-85F38F5BA0B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{C3FC1578-9769-4B25-8D14-25B27330E557}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3FC1578-9769-4B25-8D14-25B27330E557}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3FC1578-9769-4B25-8D14-25B27330E557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B1D37D6-3390-4D9C-AADC-5BCC2A3C36BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B1D37D6-3390-4D9C-AADC-5BCC2A3C36BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B1D37D6-3390-4D9C-AADC-5BCC2A3C36BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B1D37D6-3390-4D9C-AADC-5BCC2A3C36BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D751D36-1D58-43DF-8883-85F38F5BA0B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D751D36-1D58-43DF-8883-85F38F5BA0B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D751D36-1D58-43DF-8883-85F38F5BA0B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D751D36-1D58-43DF-8883-85F38F5BA0B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,7 @@ namespace RandomPacketSelection.Model
 {
     public class ExcelInputs : INotifyPropertyChanged, IEquatable<ExcelInputs>
     {
-        [ExcelColumnName("FIRST NAME")]
+        [ExcelColumnName(@"FIRST NAME")]
         public string ClientFirstName { get; set; }
         
         [ExcelColumnName("LAST NAME")]
