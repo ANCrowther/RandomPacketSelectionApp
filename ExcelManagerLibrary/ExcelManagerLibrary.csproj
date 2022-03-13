@@ -63,7 +63,6 @@
     <Compile Include="Helpers\ExcelIgnoreAttribute.cs" />
     <Compile Include="Managers\ExcelImporter.cs" />
     <Compile Include="Managers\ExcelManager.cs" />
-    <Compile Include="Models\ClientModel.cs" />
     <Compile Include="Models\ExcelInputs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

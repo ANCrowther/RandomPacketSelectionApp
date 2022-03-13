@@ -9,7 +9,7 @@ using ExcelManagerLibrary.Helpers;
 
 namespace ExcelManagerLibrary.Models
 {
-    internal class ExcelInputs : INotifyPropertyChanged, IEquatable<ExcelInputs>
+    public class ExcelInputs : INotifyPropertyChanged, IEquatable<ExcelInputs>
     {
         [ExcelColumnName(@"Male/Female")]
         public string Sex { get; set; }

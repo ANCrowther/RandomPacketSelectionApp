@@ -12,21 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WVSRandomizer.ViewModel;
 
-namespace WVSRandomizer
+namespace WVSRandomizer.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for RandomClientView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RandomClientView : UserControl
     {
-        readonly RandomClientViewModel VM;
-        public MainWindow()
+        public RandomClientView()
         {
             InitializeComponent();
-            VM = new RandomClientViewModel();
-            this.DataContext = VM;
         }
     }
 }

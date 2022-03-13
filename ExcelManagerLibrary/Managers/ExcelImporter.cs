@@ -16,7 +16,7 @@ namespace ExcelManagerLibrary.Managers
             {
                 var worksheet = wb.Worksheets.Where(w=>w.Name==excelSheetName).First();
                 var properties = objectType.GetProperties();
-                var columns = worksheet.FirstRow().Cells().Select((v, i) => new { v.Value, Index = i + 1 });
+                var columns = worksheet.FirstRow().Cells().Select((v, i) => new { Value = v.Value, Index = i + 1 });
 
                 foreach(IXLRow row in worksheet.RowsUsed().Skip(1))
                 {
