@@ -1,4 +1,4 @@
-﻿// Nuget Package used [excel-mapper]:https://github.com/hughbe/excel-mapper
+﻿ // Nuget Package used [excel-mapper]:https://github.com/hughbe/excel-mapper
 // Go to link to read MIT license: https://github.com/hughbe/excel-mapper/blob/master/LICENSE
 
 using ExcelMapper;
@@ -46,7 +46,7 @@ namespace RandomPacketSelection.Other
             
             using (var importer = new ExcelImporter(stream))
             {
-                sheet = importer.ReadSheet();
+                sheet = importer.ReadSheet("DDMASTER");
 
                 excelInputs = sheet.ReadRows<ExcelInputs>().ToArray();
             }

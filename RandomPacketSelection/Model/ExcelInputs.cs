@@ -6,16 +6,17 @@ namespace RandomPacketSelection.Model
 {
     public class ExcelInputs : INotifyPropertyChanged, IEquatable<ExcelInputs>
     {
-        [ExcelColumnName("First Name")]
+        [ExcelColumnName("FIRST NAME")]
         public string ClientFirstName { get; set; }
         
-        [ExcelColumnName("Last Name")]
+        [ExcelColumnName("LAST NAME")]
         public string ClientLastName { get; set; }
         
-        [ExcelColumnName("Employee")]
+        [ExcelColumnName("WVSC")]
         public string EmployeeName { get; set; }
-        
-        [ExcelColumnName("Client Checked")]
+
+        //[ExcelColumnName("Client Checked")]
+        [ExcelIgnore]
         public bool ClientChecked { get; set; } = false;
 
         // The original excel list used kept the clients' first and last names in different columns.
