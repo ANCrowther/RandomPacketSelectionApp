@@ -110,12 +110,14 @@ namespace WVSRandomizer.ViewModel
 
         private int GetTotalEmployeeCount()
         {
-            throw new NotImplementedException();
+            int count = (from x in ExcelInputList select x.WVSC).Distinct().Count();
+            return count;
         }
 
         private int GetTotalClientCount()
         {
-            throw new NotImplementedException();
+
+            return ExcelInputList.Count;
         }
 
         private void LoadList()
@@ -129,7 +131,7 @@ namespace WVSRandomizer.ViewModel
         private List<ClientModel> GetExcelList()
         {
             List<ClientModel> list = new List<ClientModel>();
-            foreach(var client in excelManager.Inputs)
+            foreach(var client in excelManager.ClientList)
             {
                 list.Add(new ClientModel { FirstName = client.FirstName, 
                                                 LastName = client.LastName,
