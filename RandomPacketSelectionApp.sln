@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelManagerLibrary", "Exce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WVSRandomizer", "WVSRandomizer\WVSRandomizer.csproj", "{4D751D36-1D58-43DF-8883-85F38F5BA0B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLiteLibrary", "SQLiteLibrary\SQLiteLibrary.csproj", "{39287443-4CF8-4BC4-8957-96A2942A78BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4D751D36-1D58-43DF-8883-85F38F5BA0B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D751D36-1D58-43DF-8883-85F38F5BA0B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D751D36-1D58-43DF-8883-85F38F5BA0B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39287443-4CF8-4BC4-8957-96A2942A78BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39287443-4CF8-4BC4-8957-96A2942A78BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39287443-4CF8-4BC4-8957-96A2942A78BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39287443-4CF8-4BC4-8957-96A2942A78BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

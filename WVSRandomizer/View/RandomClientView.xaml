@@ -119,10 +119,10 @@
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Employee Name"
                                                 Width="130"
-                                                Binding="{Binding Path=EmployeeName}"/>
+                                                Binding="{Binding Path=WVSC}"/>
                             <DataGridTextColumn Header="Client Name"
                                                 Width="auto"
-                                                Binding="{Binding Path=ClientFullName}"/>
+                                                Binding="{Binding Path=FirstLastName}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>

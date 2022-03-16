@@ -253,13 +253,11 @@ namespace WVSRandomizer.ViewModel
 
         private void UpdateDataGrid()
         {
-            //ExcelInputList.Where(c => c.ClientFullName == randomClient.FullName).Select(c => { c.ClientChecked = true; return c; }).ToList();
-            //List<ExcelInputs> tempList = new List<ExcelInputs>();
-            //tempList = ExcelInputList.ToList();
-            //ExcelInputList.Clear();
-            //ExcelInputList = new ObservableCollection<ExcelInputs>(tempList);
-
-            throw new NotImplementedException();
+            ExcelInputList.Where(c => c.FirstLastName == randomClient.FirstLastName).Select(c => { c.ClientChecked = true; return c; }).ToList();
+            List<ClientModel> tempList = new List<ClientModel>();
+            tempList = ExcelInputList.ToList();
+            ExcelInputList.Clear();
+            ExcelInputList = new ObservableCollection<ClientModel>(tempList);
         }
 
         private void GetThreeRandomClientList()

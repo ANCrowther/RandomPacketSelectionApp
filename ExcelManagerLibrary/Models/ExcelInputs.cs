@@ -28,7 +28,7 @@ namespace ExcelManagerLibrary.Models
         public string DVR_Status { get; set; } = string.Empty;
 
         [ExcelColumnName("Monitoring Plan Start Date")]
-        public DateTime MonitoringPlan_StartDate { get; set; } = DateTime.MinValue;
+        public string MonitoringPlan_StartDate { get; set; } = string.Empty;
 
         [ExcelColumnName("LAST NAME")]
         public string LastName { get; set; } = string.Empty;
@@ -49,22 +49,22 @@ namespace ExcelManagerLibrary.Models
         public string AdditionalStaff { get; set; } = string.Empty;
 
         [ExcelColumnName("Funding Increase Exp. Date")] // 15
-        public DateTime? FundingIncrease_ExpDate { get; set; } = DateTime.MinValue;
+        public string FundingIncrease_ExpDate { get; set; } = string.Empty;
 
         [ExcelColumnName("ETR Hours")]
-        public double? ETRHours { get; set; } = 0.0;
+        public string ETRHours { get; set; } = string.Empty;
 
         [ExcelColumnName("Target Hours")]
-        public double? TargetHours { get; set; } = 0.0;
+        public string TargetHours { get; set; } = string.Empty;
 
         [ExcelColumnName("Up to Hours")]
-        public double? UpToHours { get; set; } = 0.0;
+        public string UpToHours { get; set; } = string.Empty;
 
         [ExcelColumnName("-Job Coach Hours")]
-        public double? JobCoachHours { get; set; } = 0.0;
+        public string JobCoachHours { get; set; } = string.Empty;
 
         [ExcelColumnName("Job Coach")] // 20
-        public string JobCouach { get; set; } = string.Empty;
+        public string JobCoach { get; set; } = string.Empty;
 
         [ExcelColumnName("ENTRY")]
         public string Entry { get; set; } = string.Empty;
@@ -73,25 +73,25 @@ namespace ExcelManagerLibrary.Models
         public string Coaching { get; set; } = string.Empty;
 
         [ExcelColumnName("Job Start")]
-        public DateTime? JobStart { get; set; } = DateTime.MinValue;
+        public string JobStart { get; set; } = string.Empty;
 
         [ExcelColumnName("Job Place")]
         public string JobPlace { get; set; } = string.Empty;
 
         [ExcelColumnName("Current Wage")] // 25
-        public decimal? CurrentWage { get; set; } = 0.0m;
+        public string CurrentWage { get; set; } = string.Empty;
 
         [ExcelColumnName("Hours per Week")]
-        public double? HoursPerWeek { get; set; } = 0.0;
+        public string HoursPerWeek { get; set; } = String.Empty;
 
         [ExcelColumnName("Job Loss")]
-        public DateTime? JobLoss { get; set; } = DateTime.MinValue;
+        public string JobLoss { get; set; } = string.Empty;
 
         [ExcelColumnName("Job Loss Reason")]
         public string JobLossReason { get; set; } = string.Empty;
 
         [ExcelColumnName("CLOSURE")]
-        public DateTime? Closure { get; set; } = DateTime.MinValue;
+        public string Closure { get; set; } = string.Empty;
 
         [ExcelColumnName("CLOSURE REASON")] // 30
         public string ClosureReason { get; set; } = string.Empty;

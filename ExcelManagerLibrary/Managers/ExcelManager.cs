@@ -20,8 +20,8 @@ namespace ExcelManagerLibrary.Managers
 
         private List<ExcelInputs> GetExcelSheet(string excelFilePath, string excelSheetName)
         {
-            var outputList = new ExcelImporter().ImportExcel<ExcelInputs>(excelFilePath,excelSheetName);
-
+            //var outputList = new ExcelImporter().ImportExcel<ExcelInputs>(excelFilePath,excelSheetName);
+            var outputList = new ExcelImporter().Importer(excelFilePath, excelSheetName);
             return outputList;
         }
 
