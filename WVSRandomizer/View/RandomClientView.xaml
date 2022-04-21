@@ -109,11 +109,19 @@
                             Background="Coral"
                             Command="{Binding Path=SelectThreeRandomCommand}" 
                             FontFamily="Comic Sans MS"/>
-                    <TextBlock Text=""/>
+                    <Button Name="UndoSelection"
+                            Content="Undo Selection"
+                            FontSize="30"
+                            Margin="5"
+                            Background="DarkGreen"
+                            Foreground="Aqua"
+                            FontFamily="Comic Sans MS"
+                            Command="{Binding Path=UndoSelectionCommand}"/>
                     <DataGrid Width="370"
                               Height="Auto"
                               Margin="5"
-                              ItemsSource="{Binding Path=ThreeClientList}"
+                              ItemsSource="{Binding Path=ThreeClientList, Mode=TwoWay}"
+                              SelectedItem="{Binding randomClient}"
                               AutoGenerateColumns="False"
                               IsReadOnly="True">
                         <DataGrid.Columns>
